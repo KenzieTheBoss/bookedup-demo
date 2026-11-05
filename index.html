@@ -110,6 +110,10 @@ h2{font-family:var(--font-display);text-transform:uppercase;letter-spacing:.03em
 .try ol{margin:0;padding-left:20px;color:var(--ink-2);font-size:16px}
 .try ol li{margin-bottom:6px}
 .try ol b{color:var(--ink)}
+.try .ways{margin:0 0 16px;padding-left:20px;color:var(--ink-2);font-size:16px}
+.try .ways li{margin-bottom:4px}
+.try .ways b{color:var(--ink)}
+.try-btns{display:flex;flex-wrap:wrap;gap:10px}
 
 /* steps */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:s;list-style:none;padding:0;margin:0}
@@ -228,7 +232,14 @@ footer a{color:var(--ink-2)}
         <p class="eyebrow">Don't take my word for it</p>
         <h2>Text it right now</h2>
         <div class="num">(909) 506-0028</div>
-        <a class="btn" id="sms-btn" href="sms:+19095060028">Open my texts</a>
+        <ul class="ways">
+          <li><b>Try the demo:</b> text "my AC stopped blowing cold"</li>
+          <li><b>Talk to Kenzie:</b> text KENZIE or "book with Kenzie"</li>
+        </ul>
+        <div class="try-btns">
+          <a class="btn" id="sms-btn" href="sms:+19095060028">Open my texts</a>
+          <a class="btn ghost" id="kenzie-btn" href="sms:+19095060028">Text KENZIE</a>
+        </div>
         <p class="fine">Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. We only text people who text us first.</p>
       </div>
       <ol>
@@ -541,6 +552,7 @@ if (VIDEO_ID) {
   const body = encodeURIComponent(N.sms);
   const sep = isiOS ? '&' : '?';
   document.getElementById('sms-btn').href = 'sms:' + DEMO_NUMBER + sep + 'body=' + body;
+  document.getElementById('kenzie-btn').href = 'sms:' + DEMO_NUMBER + sep + 'body=KENZIE';
 })();
 
 // Sticky mobile CTA: show after hero, hide while the booking section is on screen
