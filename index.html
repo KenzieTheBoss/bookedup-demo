@@ -262,6 +262,15 @@ footer a{color:var(--ink-2)}
     </ol>
   </section>
 
+  <section id="other">
+    <h2>Not a home service business?</h2>
+    <p class="lede">BookedUp works for any business that misses calls: salons and lash studios, tattoo shops, auto shops and detailers, realtors, event pros and more. The demo line is set up for home services, so here's how to see it for yours: text KENZIE to <span style="white-space:nowrap">(909) 506-0028</span>, or pick a time below and I'll show you how it would work for your business.</p>
+    <div class="try-btns">
+      <a class="btn ghost" id="kenzie-btn-2" href="sms:+19095060028">Text KENZIE</a>
+      <a class="btn" href="#book">Pick a time</a>
+    </div>
+  </section>
+
   <section>
     <h2>What our 15 minutes looks like</h2>
     <p class="lede">No slideshow, no pressure. If it's not a fit, I'll tell you.</p>
@@ -553,7 +562,9 @@ if (VIDEO_ID) {
   const body = encodeURIComponent(N.sms);
   const sep = isiOS ? '&' : '?';
   document.getElementById('sms-btn').href = 'sms:' + DEMO_NUMBER + sep + 'body=' + body;
-  document.getElementById('kenzie-btn').href = 'sms:' + DEMO_NUMBER + sep + 'body=KENZIE';
+  ['kenzie-btn', 'kenzie-btn-2'].forEach(function(id){
+    document.getElementById(id).href = 'sms:' + DEMO_NUMBER + sep + 'body=KENZIE';
+  });
 })();
 
 // Sticky mobile CTA: show after hero, hide while the booking section is on screen
