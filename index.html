@@ -153,6 +153,8 @@ details p{margin:10px 0 0;color:var(--ink-2);max-width:62ch}
 
 footer{border-top:1px solid var(--line);padding-block:26px 44px;font-size:14px;color:var(--ink-2);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 footer a{color:var(--ink-2)}
+footer .legal{display:flex;gap:16px;flex-wrap:wrap}
+.fine a{color:var(--ink-2)}
 
 .sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:10;display:none}
 .sticky .btn{width:100%;box-shadow:0 10px 24px rgba(0,0,0,.25)}
@@ -241,6 +243,7 @@ footer a{color:var(--ink-2)}
           <a class="btn ghost" id="kenzie-btn" href="sms:+19095060028">Text KENZIE</a>
         </div>
         <p class="fine">Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. We only text people who text us first.</p>
+        <p class="fine"><a href="https://kenzietheboss.github.io/BookedUp/terms.html" target="_blank" rel="noopener">See our SMS Terms</a></p>
       </div>
       <ol>
         <li><b>Pretend you're your own customer.</b> <span id="n-ex">"My AC stopped blowing cold."</span></li>
@@ -315,7 +318,7 @@ footer a{color:var(--ink-2)}
 
 <footer class="wrap">
   <span>BookedUp &middot; Pomona, California &middot; Built and run by Mykenzie Cardenas</span>
-  <a href="https://kenzietheboss.github.io/BookedUp/" target="_blank" rel="noopener">Privacy &amp; SMS terms</a>
+  <span class="legal"><a href="https://kenzietheboss.github.io/BookedUp/privacy.html" target="_blank" rel="noopener">Privacy Policy</a> <a href="https://kenzietheboss.github.io/BookedUp/terms.html" target="_blank" rel="noopener">SMS Terms</a></span>
 </footer>
 
 <div class="sticky" id="sticky"><a class="btn" href="#book">Pick a time to talk</a></div>
