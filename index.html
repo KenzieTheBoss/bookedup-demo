@@ -122,6 +122,12 @@ h2{font-family:var(--font-display);text-transform:uppercase;letter-spacing:.03em
 .steps h3{font-size:17px;font-weight:600;margin:0 0 5px}
 .steps p{margin:0;font-size:15px;color:var(--ink-2);line-height:1.5}
 
+/* what you get */
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.why div{background:var(--card);padding:22px 20px;min-width:0}
+.why h3{font-size:17px;font-weight:600;margin:0 0 5px}
+.why p{margin:0;font-size:15px;color:var(--ink-2);line-height:1.5}
+
 /* call agenda */
 .agenda{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
 .agenda div{background:var(--card);padding:22px 20px}
@@ -164,11 +170,13 @@ footer .legal{display:flex;gap:16px;flex-wrap:wrap}
   .steps{grid-template-columns:1fr 1fr}
   .try{grid-template-columns:1fr}
   .agenda{grid-template-columns:1fr}
+  .why{grid-template-columns:1fr 1fr}
 }
 @media (max-width:560px){
   body{font-size:16px}
   .where{display:none}
   .steps{grid-template-columns:1fr}
+  .why{grid-template-columns:1fr}
   section{padding-block:40px}
   .try{padding:22px}
   .sticky.on{display:block}
@@ -263,6 +271,20 @@ footer .legal{display:flex;gap:16px;flex-wrap:wrap}
       <li><h3>We find out what's wrong.</h3><p id="n-s3">Problem, address, urgency. Emergencies ping your phone right away.</p></li>
       <li><h3>We book it.</h3><p>Real openings from your Google Calendar. You get a text with the job.</p></li>
     </ol>
+  </section>
+
+  <section id="why">
+    <h2>What you get</h2>
+    <p class="lede">Most answering tools are voice bots you set up yourself and pay for by the minute. BookedUp texts, books real jobs, and I set it up with you.</p>
+    <div class="why">
+      <div><h3>Books real jobs</h3><p>It offers real openings from your Google Calendar and books the one they pick. Reschedules and cancels too.</p></div>
+      <div><h3>English and Spanish</h3><p>A customer who texts in Spanish gets answered in Spanish, all the way to the booking.</p></div>
+      <div><h3>Emergencies keep pinging</h3><p>Gas smell or water everywhere texts you right away. No reply in 5 minutes, it texts again, then your backup tech.</p></div>
+      <div><h3>Only where you work</h3><p>Give it your cities or ZIP codes. An address outside them gets a polite no, not a wasted trip.</p></div>
+      <div><h3>Photos come to you</h3><p>Customers can text a photo of the problem. It lands on your phone with their number.</p></div>
+      <div><h3>One flat price</h3><p>250 conversations a month included. No per-minute meter, so a heat wave doesn't blow up the bill.</p></div>
+    </div>
+    <p class="fine">Optional: a check-in text when a customer goes quiet, and Google review requests after the job.</p>
   </section>
 
   <section id="other">
